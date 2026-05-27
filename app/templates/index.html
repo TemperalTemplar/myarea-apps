@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyArea Apps</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/apps.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<nav class="apps-nav">
+  <div class="apps-nav-inner">
+    <a href="/" class="apps-logo">MY<span>AREA</span> <span class="apps-logo-sub">APPS</span></a>
+    <div class="apps-nav-links">
+      <a href="https://myarea.wrds361.com" class="apps-nav-link">Social</a>
+      <a href="https://myareagames.wrds361.com" class="apps-nav-link">Games</a>
+      <a href="https://geozones.wrds361.com" class="apps-nav-link">GeoZones</a>
+      <a href="https://positive.wrds361.com" class="apps-nav-link">Positive</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <div class="apps-hero">
+    <div class="apps-hero-inner">
+      <div class="apps-hero-title">Your Platform.<br><span>Your Rules.</span></div>
+      <div class="apps-hero-sub">
+        Privacy-first. Self-hosted. No ads, no algorithms, no data harvesting.<br>
+        Everything you need in one place — social, wellness, creativity, and games.
+      </div>
+      <a href="https://myarea.wrds361.com/auth/register" class="apps-cta">Join MyArea — It's Free</a>
+    </div>
+  </div>
+
+  <!-- App Grid -->
+  <div class="apps-grid-section">
+    <div class="apps-grid-inner">
+      <h2 class="apps-section-title">All Apps</h2>
+      <div class="apps-grid">
+        {% for app in apps %}
+        <a href="{{ app.url }}" class="app-card" style="--card-color: {{ app.color }};">
+          <div class="app-card-icon">
+            <i class="bi {{ app.icon }}" style="color: {{ app.color }};"></i>
+          </div>
+          <div class="app-card-category">{{ app.category }}</div>
+          <div class="app-card-name">{{ app.name }}</div>
+          <div class="app-card-tagline">{{ app.tagline }}</div>
+          <ul class="app-card-features">
+            {% for feature in app.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+          <div class="app-card-cta">Open {{ app.name }} →</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform values -->
+  <div class="apps-values-section">
+    <div class="apps-grid-inner">
+      <h2 class="apps-section-title">Why MyArea?</h2>
+      <div class="apps-values-grid">
+        {% for icon, title, desc in [
+          ('bi-shield-lock-fill', 'Privacy First', 'Your data stays on our servers. No selling, no tracking, no third parties.'),
+          ('bi-house-heart-fill', 'Self-Hosted', 'We run our own hardware. No Big Tech cloud dependencies.'),
+          ('bi-people-fill', 'Community Driven', 'Built for people, not profit. No ads, no algorithms pushing content.'),
+          ('bi-translate', 'For Everyone', 'Support for 16 languages covering 73% of the world\'s population.'),
+        ] %}
+        <div class="app-value-card">
+          <i class="bi {{ icon }} app-value-icon"></i>
+          <div class="app-value-title">{{ title }}</div>
+          <div class="app-value-desc">{{ desc }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="apps-footer">
+  <div class="apps-grid-inner">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <div class="apps-logo" style="font-size:1.2rem;">MY<span>AREA</span></div>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+        <a href="https://myarea.wrds361.com">Social</a>
+        <a href="https://positive.wrds361.com">Positive</a>
+        <a href="https://geozones.wrds361.com">GeoZones</a>
+        <a href="https://myareagames.wrds361.com">Games</a>
+      </div>
+      <div style="color:#6b7280;font-size:0.78rem;">Privacy-first · Self-hosted · No ads</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
