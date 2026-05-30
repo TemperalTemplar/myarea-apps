@@ -17,12 +17,12 @@
       <a href="https://myareagames.wrds361.com" class="apps-nav-link">Games</a>
       <a href="https://geozones.wrds361.com" class="apps-nav-link">GeoZones</a>
       <a href="https://positive.wrds361.com" class="apps-nav-link">Positive</a>
+      <a href="https://journal.wrds361.com" class="apps-nav-link">Journal</a>
     </div>
   </div>
 </nav>
 
 <main>
-  <!-- Hero -->
   <div class="apps-hero">
     <div class="apps-hero-inner">
       <div class="apps-hero-title">Your Platform.<br><span>Your Rules.</span></div>
@@ -34,32 +34,50 @@
     </div>
   </div>
 
-  <!-- App Grid -->
+  <!-- MyArea Native Apps -->
   <div class="apps-grid-section">
     <div class="apps-grid-inner">
-      <h2 class="apps-section-title">All Apps</h2>
+      <h2 class="apps-section-title">MyArea Apps</h2>
+      <p class="apps-section-sub">Built for the platform. Fully integrated. Sovereign and self-hosted.</p>
       <div class="apps-grid">
-        {% for app in apps %}
-        <a href="{{ app.url }}" class="app-card" style="--card-color: {{ app.color }};">
-          <div class="app-card-icon">
-            <i class="bi {{ app.icon }}" style="color: {{ app.color }};"></i>
-          </div>
-          <div class="app-card-category">{{ app.category }}</div>
-          <div class="app-card-name">{{ app.name }}</div>
-          <div class="app-card-tagline">{{ app.tagline }}</div>
+        {% for a in native %}
+        <a href="{{ a.url }}" class="app-card" style="--card-color: {{ a.color }};">
+          <div class="app-card-icon"><i class="bi {{ a.icon }}" style="color: {{ a.color }};"></i></div>
+          <div class="app-card-category">{{ a.category }}</div>
+          <div class="app-card-name">{{ a.name }}</div>
+          <div class="app-card-tagline">{{ a.tagline }}</div>
           <ul class="app-card-features">
-            {% for feature in app.features %}
-            <li>{{ feature }}</li>
-            {% endfor %}
+            {% for feature in a.features %}<li>{{ feature }}</li>{% endfor %}
           </ul>
-          <div class="app-card-cta">Open {{ app.name }} →</div>
+          <div class="app-card-cta">Open {{ a.name }} →</div>
         </a>
         {% endfor %}
       </div>
     </div>
   </div>
 
-  <!-- Platform values -->
+  <!-- Platform Tools -->
+  <div class="apps-grid-section" style="background: rgba(255,255,255,0.02);">
+    <div class="apps-grid-inner">
+      <h2 class="apps-section-title">Platform Tools</h2>
+      <p class="apps-section-sub">Best-in-class self-hosted tools running on the MyArea infrastructure.</p>
+      <div class="apps-grid">
+        {% for a in tools %}
+        <a href="{{ a.url }}" class="app-card" style="--card-color: {{ a.color }};">
+          <div class="app-card-icon"><i class="bi {{ a.icon }}" style="color: {{ a.color }};"></i></div>
+          <div class="app-card-category">{{ a.category }}</div>
+          <div class="app-card-name">{{ a.name }}</div>
+          <div class="app-card-tagline">{{ a.tagline }}</div>
+          <ul class="app-card-features">
+            {% for feature in a.features %}<li>{{ feature }}</li>{% endfor %}
+          </ul>
+          <div class="app-card-cta">Open {{ a.name }} →</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
   <div class="apps-values-section">
     <div class="apps-grid-inner">
       <h2 class="apps-section-title">Why MyArea?</h2>
@@ -68,7 +86,7 @@
           ('bi-shield-lock-fill', 'Privacy First', 'Your data stays on our servers. No selling, no tracking, no third parties.'),
           ('bi-house-heart-fill', 'Self-Hosted', 'We run our own hardware. No Big Tech cloud dependencies.'),
           ('bi-people-fill', 'Community Driven', 'Built for people, not profit. No ads, no algorithms pushing content.'),
-          ('bi-translate', 'For Everyone', 'Support for 16 languages covering 73% of the world\'s population.'),
+          ('bi-translate', 'For Everyone', "Support for 16 languages covering 73% of the world's population."),
         ] %}
         <div class="app-value-card">
           <i class="bi {{ icon }} app-value-icon"></i>
@@ -88,6 +106,7 @@
       <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
         <a href="https://myarea.wrds361.com">Social</a>
         <a href="https://positive.wrds361.com">Positive</a>
+        <a href="https://journal.wrds361.com">Journal</a>
         <a href="https://geozones.wrds361.com">GeoZones</a>
         <a href="https://myareagames.wrds361.com">Games</a>
       </div>
