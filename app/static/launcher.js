@@ -8,6 +8,10 @@
     {name:'GeoZones',  url:'https://geozones.wrds361.com',     color:'#cccc00', icon:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'},
     {name:'Games',     url:'https://myareagames.wrds361.com',  color:'#7c3aed', icon:'M2 6h20v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z M12 12h.01 M7 12h.01 M17 12h.01'},
     {name:'Chat',      url:'https://chat.wrds361.com',         color:'#06b6d4', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'},
+    {name:'Forum',     url:'https://forum.wrds361.com',      color:'#e03030', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h8 M8 14h5'},
+    {name:'Forum',   url:'https://forum.wrds361.com',   color:'#e63946', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h8 M8 14h5'},
+    {name:'Groups',  url:'https://groups.wrds361.com',  color:'#4a9eff', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0 M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75'},
+    {name:'Fitness', url:'https://fitness.wrds361.com', color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
   ];
 
   var TOOLS = [
