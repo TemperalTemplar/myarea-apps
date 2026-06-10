@@ -1,4 +1,6 @@
 (function(){
+  // FLOATING build for Rocket.Chat (and other apps we don't own the template of).
+  // Renders the bell + 9-dot as a fixed corner overlay above the host app.
   if(document.getElementById('ma-launcher-wrap'))return;
 
   var APPS = [
@@ -261,26 +263,30 @@
   dd.addEventListener('click',function(e){e.stopPropagation();});
   notifPanel.addEventListener('click',function(e){e.stopPropagation();});
 
-  // ── Auto-inject ─────────────────────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded',function(){
-    var targets = [
-      document.querySelector('.nav-right'),
-      document.querySelector('.ma-nav-right'),
-      document.querySelector('.gz-nav-links'),
-      document.querySelector('.hub-nav-links'),
-      document.querySelector('.user-chip'),
-      document.querySelector('.topbar-right'),
-    ];
-    for(var i=0;i<targets.length;i++){
-      if(targets[i]){
-        targets[i].appendChild(wrap);
-        break;
-      }
-    }
-    if(!wrap.parentNode) document.body.appendChild(wrap);
+  // ── Floating mount (fixed corner overlay) ─────────────────────────────────
+  // Wrap the bell + 9-dot in a fixed container that floats above the host app
+  // (Rocket.Chat is a React SPA we don't control; a fixed overlay outside its
+  // root survives its re-renders).
+  var floatHost = document.createElement('div');
+  floatHost.id = 'ma-float-host';
+  floatHost.style.cssText = 'position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:2147483000;display:flex;align-items:center;gap:6px;font-family:\'Courier New\',monospace';
+  floatHost.appendChild(wrap);
 
-    // Start polling — only if MA_USER is set by the host page
+  function mountFloat(){
+    if(!document.getElementById('ma-float-host') && document.body){
+      document.body.appendChild(floatHost);
+    }
+  }
+  function start(){
+    mountFloat();
     pollNotifications();
     setInterval(pollNotifications, 50000);
-  });
+    // SPA watchdog: if the host app ever removes our overlay, re-add it.
+    setInterval(mountFloat, 4000);
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
 })();
