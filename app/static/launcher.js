@@ -11,17 +11,34 @@
     {name:'Forum',     url:'https://forum.wrds361.com',        color:'#e03030', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h8 M8 14h5'},
     {name:'Groups',    url:'https://groups.wrds361.com',       color:'#4a9eff', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0 M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75'},
     {name:'Fitness',   url:'https://fitness.wrds361.com',      color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
+//    {name:'Vet App',   url:'https://wh.wrds361.com',           color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
+
   ];
 
-  var TOOLS = [
-    {name:'Mail',    url:'https://mail.wrds361.com',    color:'#e63946', icon:'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6'},
-    {name:'Cloud',   url:'https://cloud.wrds361.com',   color:'#0082c9', icon:'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'},
-    {name:'Vault',   url:'https://vault.wrds361.com',   color:'#175DDC', icon:'M3 11h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V11z M7 11V7a5 5 0 0 1 10 0v4'},
-    {name:'Radio',   url:'https://radio.wrds361.com',   color:'#e2533c', icon:'M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0 M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49'},
-    {name:'Family',  url:'https://family.wrds361.com',  color:'#16a34a', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0'},
-    {name:'Fitness', url:'https://fitness.wrds361.com', color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
-    {name:'AI',      url:'https://ai.wrds361.com',      color:'#8b5cf6', icon:'M3 3h18v18H3z M9 9h.01 M15 9h.01 M9 15h6'},
-    {name:'All Apps',url:'https://apps.wrds361.com',    color:'#6478a0', icon:'M3 3h7v7H3z M14 3h7v7h-7z M14 14h7v7h-7z M3 14h7v7H3z'},
+  var COMMUNITY_TOOLS = [
+    {name:'LMS',    url:'https://lms.wrds361.com',    color:'#e63946', icon:'M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5'},
+    {name:'CDDS',   url:'https://cdds.wrds361.com',   color:'#0082c9', icon:'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6'},
+    {name:'Games',  url:'https://myareagames.wrds361.com', color:'#175DDC', icon:'M2 6h20v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z M12 12h.01 M7 12h.01 M17 12h.01'},
+    {name:'Radio',  url:'https://radio.wrds361.com',  color:'#e2533c', icon:'M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0 M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49'},
+    {name:'Family', url:'https://family.wrds361.com', color:'#16a34a', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0'},
+    {name:'AI',     url:'https://ai.wrds361.com',     color:'#8b5cf6', icon:'M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1H1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z'},
+    {name:'Apps',   url:'https://apps.wrds361.com',   color:'#6478a0', icon:'M3 3h7v7H3z M14 3h7v7h-7z M14 14h7v7h-7z M3 14h7v7H3z'},
+  ];
+
+//  var WORK_TOOLS = [
+//    {name:'Case',    url:'https://case.wrds361.com',    color:'#e63946', icon:'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c->
+//    {name:'Lexfile', url:'https://lex.wrds361.com',     color:'#0082c9', icon:'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10>
+//    {name:'Spectra', url:'https://spect.wrds361.com',   color:'#175DDC', icon:'M3 11h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V11>
+//    {name:'Lineage', url:'https://Linage.wrds361.com',  color:'#e2533c', icon:'M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0 M16.>
+//  ];
+
+  var THIRD_PARTY_TOOLS = [
+    {name:'Mail',   url:'https://mail.wrds361.com',   color:'#e63946', icon:'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6'},
+    {name:'Cloud',  url:'https://cloud.wrds361.com',  color:'#0082c9', icon:'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'},
+    {name:'Vault',  url:'https://vault.wrds361.com',  color:'#175DDC', icon:'M3 11h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V11z M7 11V7a5 5 0 0 1 10 0v4'},
+    {name:'Radio',  url:'https://radio.wrds361.com',  color:'#e2533c', icon:'M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0 M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49'},
+    {name:'SSO',    url:'https://auth.wrds361.com',   color:'#8b5cf6', icon:'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'},
+    {name:'Rocket', url:'https://rocket.wrds361.com', color:'#e2533c', icon:'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'},
   ];
 
   // ── Notification state ──────────────────────────────────────────────────
