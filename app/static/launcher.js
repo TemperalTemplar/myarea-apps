@@ -219,7 +219,12 @@
     '<div style="height:1px;background:#243040;margin:0 8px"></div>'+
     '<div style="font-size:9px;color:#4a5a7a;letter-spacing:2px;font-family:\'Courier New\',monospace;padding:10px 14px 4px">TOOLS</div>'+
     '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding:4px 8px 10px">'+
-      TOOLS.map(function(a){return makeAppCell(a,true);}).join('')+
+      COMMUNITY_TOOLS.map(function(a){return makeAppCell(a,true);}).join('')+
+    '</div>'+
+    '<div style="height:1px;background:#243040;margin:0 8px"></div>'+
+    '<div style="font-size:9px;color:#4a5a7a;letter-spacing:2px;font-family:\'Courier New\',monospace;padding:10px 14px 4px">THIRD PARTY</div>'+
+    '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding:4px 8px 10px">'+
+      THIRD_PARTY_TOOLS.map(function(a){return makeAppCell(a,true);}).join('')+
     '</div>'+
     '<div style="border-top:1px solid #243040;padding:8px 14px;display:flex;align-items:center;justify-content:space-between">'+
       '<a href="https://apps.wrds361.com" target="_blank" style="font-size:9px;color:#4a5a7a;letter-spacing:1px;font-family:\'Courier New\',monospace;text-decoration:none;text-transform:uppercase">apps.wrds361.com</a>'+
