@@ -11,7 +11,7 @@
     {name:'Forum',     url:'https://forum.wrds361.com',        color:'#e03030', icon:'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z M8 10h8 M8 14h5'},
     {name:'Groups',    url:'https://groups.wrds361.com',       color:'#4a9eff', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0 M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75'},
     {name:'Fitness',   url:'https://fitness.wrds361.com',      color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
-//    {name:'Vet App',   url:'https://wh.wrds361.com',           color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
+    {name:'Vet App',   url:'https://wh.wrds361.com',           color:'#dc2626', icon:'M22 12h-4l-3 9L9 3l-3 9H2'},
 
   ];
 
@@ -23,6 +23,7 @@
     {name:'Family', url:'https://family.wrds361.com', color:'#16a34a', icon:'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0'},
     {name:'AI',     url:'https://ai.wrds361.com',     color:'#8b5cf6', icon:'M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1H1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z'},
     {name:'Apps',   url:'https://apps.wrds361.com',   color:'#6478a0', icon:'M3 3h7v7H3z M14 3h7v7h-7z M14 14h7v7h-7z M3 14h7v7H3z'},
+    {name:'Files',  url:'https://files.wrds361.com', color:'#8899bb', icon:'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6'},
   ];
 
 //  var WORK_TOOLS = [
